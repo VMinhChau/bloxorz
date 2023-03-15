@@ -1,0 +1,28 @@
+10 14 9 1
+# # # . . . . . # # # # # #
+# G # . . # . . # # # # @ #
+# # # . . . . . # # # # . .
+. . . . . . . . . # # # . .
+. . . . . . . . . . . # # .
+. . . . . . . . . . . . # .
+. . . . . . . . . . . . # .
+. . . . . . . . . . . # # .
+. . . . # # # # # . . # # .
+. . . . # o . . # # # x # .
+3
+{   "switch": "teleport_switch",
+    "position": [12,1],
+    "blocks_process": 2,
+    "point": [[9,1],[12,1]],
+    "type": "toggle" }
+{   "switch": "hard_switch",
+    "position": [11,9],
+    "blocks_process": 4,
+    "point": [[6,1],[7,1],[12,2],[12,3]],
+    "type": "toggle" }
+{   "switch": "sort_switch",
+    "position": [5,9],
+    "blocks_process": 2,
+    "point": [[3,1],[4,1]],
+    "type": "toggle" }
+

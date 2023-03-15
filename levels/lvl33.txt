@@ -1,0 +1,78 @@
+10 15 1 3
+. . . . . # # o # # # . . . .
+. . . . . # # # # # # . . . .
+# # # . . o # # o # # # # # .
+# # # # # # # # # o o # # o .
+. . . . . # # o # # o # # # .
+. . . . . # # # # # # o # # .
+# # # . . # # # # # # o # # #
+# G # # # # o # . . # # # o x
+# # # . . # # # . . . # # # #
+# # # . . . . . . . . . # # #
+13
+{   "switch": "hard_switch",
+    "position": [14,7],
+    "blocks_process": 1,
+    "point": [[11,1]],
+    "type": "open" }
+{   "switch": "sort_switch",
+    "position": [7,0],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [5,2],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [8,2],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [9,2],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [13,3],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [7,4],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [10,3],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [10,4],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [11,5],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [13,7],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [6,7],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [11,6],
+    "blocks_process": 2,
+    "point": [[3,7],[4,7]],
+    "type": "close" }
+

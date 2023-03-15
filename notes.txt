@@ -1,0 +1,4 @@
+* in process_state: check             elif game_map[y][x-1] == 'o':
+                                    sort_switch(block, x - 1, y)
+* created ga branch
+* delete fuzzywuzzy

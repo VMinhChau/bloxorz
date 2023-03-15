@@ -1,0 +1,26 @@
+9 14 10 6
+. . . . . . . . . . . . # x
+. . # # # # # # . . . # # #
+. # # # . . # # . . # x # #
+. # G # . . . # # # # # . .
+. # # # . . . . # # # . . .
+. . . . . . . . . # # . . .
+. . . . # # # . . # # . . .
+# # . . # x # . . # # . . .
+# # . . # # # # # # # . . .
+3
+{   "switch": "hard_switch",
+    "position": [13,0],
+    "blocks_process": 3,
+    "point": [[4,1],[2,7],[3,7]],
+    "type": "toggle" }
+{   "switch": "hard_switch",
+    "position": [11,2],
+    "blocks_process": 2,
+    "point": [[2,8],[3,8]],
+    "type": "toggle" }
+{   "switch": "hard_switch",
+    "position": [5,7],
+    "blocks_process": 2,
+    "point": [[4,2],[5,2]],
+    "type": "toggle" }

@@ -1,0 +1,33 @@
+10 15 2 4
+. . . # # # # # = = # # # # .
+. . . # G # # . . . . . = # .
+. . . # # # . . . . . . = # x
+. . . . . . . = # # # # # # #
+. . # . . . . = = . . . . . #
+. x # = . . . = = . . . . . #
+= = = = . . . # # . . . . # #
+= = = # = # = = # = . . x # .
+# = = = = = = = = = = = # . .
+. = # = = = . . = = = = # . .
+4
+{   "switch": "hard_switch",
+    "position": [14,2],
+    "blocks_process": 1,
+    "point": [[10,3]],
+    "type": "close" }
+{   "switch": "hard_switch",
+    "position": [14,2],
+    "blocks_process": 3,
+    "point": [[11,3],[9,6],[12,6]],
+    "type": "open" }
+{   "switch": "hard_switch",
+    "position": [1,5],
+    "blocks_process": 2,
+    "point": [[10,3],[11,3]],
+    "type": "open" }
+{   "switch": "hard_switch",
+    "position": [12,7],
+    "blocks_process": 1,
+    "point": [[14,7]],
+    "type": "toggle" }
+

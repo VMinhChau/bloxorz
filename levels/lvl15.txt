@@ -1,0 +1,37 @@
+10 15 1 8
+. . . . . . . # # # . . # # #
+. . . . # # # # # # . . x # #
+# # . . # . . # # # . . # # #
+# # # # # . . . o . . . . . .
+# # . . . . . . . . . . . . .
+. # . . . . . @ . . . . . . .
+. # . . . . . # . . . . . . .
+# # # . . . # # # . . o # # .
+# # # # # # # # # # # # G # .
+# # # . . . # # # . . o # # .
+5
+{   "switch": "teleport_switch",
+    "position": [7,5],
+    "blocks_process": 2,
+    "point": [[1,8],[13,1]],
+    "type": "toggle" }
+{   "switch": "hard_switch",
+    "position": [12,1],
+    "blocks_process": 4,
+    "point": [[2,2],[3,2],[5,1],[6,1]],
+    "type": "toggle" }
+{   "switch": "sort_switch",
+    "position": [6,6],
+    "blocks_process": 2,
+    "point": [[4,0],[4,1]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [6,6],
+    "blocks_process": 2,
+    "point": [[4,0],[4,1]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [6,6],
+    "blocks_process": 2,
+    "point": [[4,0],[4,1]],
+    "type": "close" }
