@@ -1,0 +1,36 @@
+8 14 1 2
+. . . . . . . . . . # # # #
+. . . . # # # # # # # x # @
+. # . . # x # . . . # # # #
+x # . . # # . . . . . . # .
+# # . . # . . . . . . . # .
+# # # # # . . . . . # # # .
+# # # . . # # # . . # G # .
+. . . . . x # . . . # # # .
+5
+{   "switch": "hard_switch",
+    "position": [11,1],
+    "blocks_process": 2,
+    "point": [[2,2],[3,2]],
+    "type": "toggle" }
+{   "switch": "hard_switch",
+    "position": [5,2],
+    "blocks_process": 1,
+    "point": [[7,7]],
+    "type": "open" }
+{   "switch": "hard_switch",
+    "position": [0,3],
+    "blocks_process": 1,
+    "point": [[3,1]],
+    "type": "open" }
+{   "switch": "hard_switch",
+    "position": [5,7],
+    "blocks_process": 2,
+    "point": [[8,6],[9,6]],
+    "type": "open" }
+{   "switch": "teleport_switch",
+    "position": [13,1],
+    "blocks_process": 2,
+    "point": [[5,6],[7,6]],
+    "type": "toggle" }
+

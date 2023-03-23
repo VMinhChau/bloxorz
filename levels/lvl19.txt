@@ -1,0 +1,28 @@
+10 15 1 0
+. # # # # # # # # # o # # # #
+. . . . . # # . . . . . . # #
+. . . . . # # . . . . . . # #
+. . . . . . . . . . . . . # #
+. . . . . . . . . . . . . # #
+# # # . . # # . . # o # # # #
+# G # . . # # . . . . . . . .
+# # # . . # # . . . . . . . .
+. # # . . # # . . . . . . . .
+. # # # # # # # # # o # # # .
+3
+{   "switch": "sort_switch",
+    "position": [10,0],
+    "blocks_process": 2,
+    "point": [[7,5],[8,5]],
+    "type": "toggle" }
+{   "switch": "sort_switch",
+    "position": [10,5],
+    "blocks_process": 2,
+    "point": [[2,9],[3,9]],
+    "type": "close" }
+{   "switch": "sort_switch",
+    "position": [10,9],
+    "blocks_process": 2,
+    "point": [[2,9],[3,9]],
+    "type": "open" }
+

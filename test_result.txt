@@ -1,0 +1,12 @@
+success
+"Level ", str(level), ":                     Found solution in    ", round(time.time() - start_time, 9), ("s")
+success
+Level  1 :                     Found solution in     0.0 ("s")
+success
+Level  1 :                     Found solution in     0.0 ("s")
+success
+Level  2 :                     Found solution in     0.0 ("s")
+success
+Level  3 :                     Found solution in     0.0 ("s")
+success
+Level  4 :                     Found solution in     0.0 ("s")

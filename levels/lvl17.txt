@@ -1,0 +1,43 @@
+10 15 1 1 
+# # # . . . . . . . . . . . .
+# # # # # # # # # . . . # # #
+# # # . . . . . # # # # # G #
+# # # . . . . . . . . . x x #
+# # # . . . . . . . . . . . .
+# # # . . . . . . . . . . . .
+# # # . . . . # # # # # x . .
+# # # # # # # # . . . # # . .
+# o # . . . . . . . . # # . .
+# # # . . . . . . . . # x . .
+6
+{   "switch": "sort_switch",
+    "position": [1,8],
+    "blocks_process": 1,
+    "point": [[8,7]],
+    "type": "toggle" }
+{   "switch": "hard_switch",
+    "position": [12,3],
+    "blocks_process": 1,
+    "point": [[6,6]],
+    "type": "close" }
+{   "switch": "hard_switch",
+    "position": [12,6],
+    "blocks_process": 1,
+    "point": [[7,2]],
+    "type": "open" }
+{   "switch": "hard_switch",
+    "position": [12,9],
+    "blocks_process": 1,
+    "point": [[8,7]],
+    "type": "close" }
+{   "switch": "hard_switch",
+    "position": [12,9],
+    "blocks_process": 1,
+    "point": [[9,1]],
+    "type": "open" }
+{   "switch": "hard_switch",
+    "position": [13,3],
+    "blocks_process": 1,
+    "point": [[6,6]],
+    "type": "open" }
+
