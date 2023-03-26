@@ -69,6 +69,7 @@ class Astar:
           if process_state(block):
                g_cost = self.get_cost_visited((block.prev.x,block.prev.y,block.prev.status,block.prev.map)) + 1
                heuristic_costs = self.compute_heuristic_costs(block, (global_variables.goal_x,global_variables.goal_y))
+               # print(heuristic_costs)
                if ((block.x,block.y,block.status,block.map) not in self.cost_visited) or g_cost < self.get_cost_visited((block.x,block.y,block.status,block.map)):
                     new_node = TreeNode(block)
                     h_cost = self.min_h_cost(heuristic_costs, new_node)
