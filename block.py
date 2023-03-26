@@ -11,7 +11,7 @@ class Block:
     id: save id for debugging
     """
 
-    def __init__(self, x, y, status, prev, game_map, x_split=None, y_split=None, id=0):
+    def __init__(self, x, y, status, prev, game_map, x_split=None, y_split=None, id=0, map=""):
         self.x = x
         self.y = y
         self.status = status
@@ -20,6 +20,7 @@ class Block:
         self.x_split = x_split
         self.y_split = y_split
         self.id = id
+        self.map = ''.join(''.join(l) for l in self.game_map)
 
     def move_up(self):
         global_variables.block_id += 1

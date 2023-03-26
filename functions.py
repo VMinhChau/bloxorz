@@ -28,13 +28,16 @@ def sort_switch(block, x, y):
                 if obj["type"] == "toggle":
                     if game_map[bridge_y][bridge_x] == '.':
                         block.game_map[bridge_y][bridge_x] = '#'
+                        block.map = ''.join(''.join(l) for l in block.game_map)
                     else:
                         block.game_map[bridge_y][bridge_x] = '.'
+                        block.map = ''.join(''.join(l) for l in block.game_map)
                 elif obj["type"] == "open":
                     block.game_map[bridge_y][bridge_x] = '#'
-
+                    block.map = ''.join(''.join(l) for l in block.game_map)
                 elif obj["type"] == "close":
                     block.game_map[bridge_y][bridge_x] = '.'
+                    block.map = ''.join(''.join(l) for l in block.game_map)
                 else:
                     print("Error at func sort_switch")
 
@@ -53,13 +56,16 @@ def hard_switch(block, x, y):
                 if obj["type"] == "toggle":
                     if block.game_map[bridge_y][bridge_x] == '.':
                         block.game_map[bridge_y][bridge_x] = '#'
+                        block.map = ''.join(''.join(l) for l in block.game_map)
                     else:
                         block.game_map[bridge_y][bridge_x] = '.'
+                        block.map = ''.join(''.join(l) for l in block.game_map)
                 elif obj["type"] == "open":
                     block.game_map[bridge_y][bridge_x] = '#'
-
+                    block.map = ''.join(''.join(l) for l in block.game_map)
                 elif obj["type"] == "close":
                     block.game_map[bridge_y][bridge_x] = '.'
+                    block.map = ''.join(''.join(l) for l in block.game_map)
                 else:
                     print("Error at func hard_switch")
 
@@ -101,10 +107,10 @@ def process_state(block):
             if game_map[y][x] == 'o':
                 # print(str(x) + ' ' + str(y))
                 sort_switch(block, x, y)
-            elif game_map[y-1][x] == 'o':
-                sort_switch(block, x, y - 1)
-            # elif game_map[y+1][x] == 'o':
-            #     sort_switch(block, x, y + 1)
+            # elif game_map[y-1][x] == 'o':
+            #     sort_switch(block, x, y - 1)
+            elif game_map[y+1][x] == 'o':
+                sort_switch(block, x, y + 1)
         if status == "SPLIT" and game_map[y][x] == 'o':
             sort_switch(block, x, y)
         if status == "SPLIT" and game_map[y_split][x_split] == 'o':
@@ -285,130 +291,4 @@ def add_move_fitness(block):
     if process_state(block):
         return True
     return False
-
-
-# def check_win_dna(dna, block):
-#     global_variables.previous = []
-#     valid_dna_s = [block]
-#     cnt = 0
-#     for gene in dna.genes:
-#         if gene == dna.U:
-#             cnt = add_move_ga(valid_dna_s, cnt, valid_dna_s[cnt].move_up())
-#         elif gene == dna.R:
-#             cnt = add_move_ga(valid_dna_s, cnt, valid_dna_s[cnt].move_right())
-#         elif gene == dna.D:
-#             cnt = add_move_ga(valid_dna_s, cnt, valid_dna_s[cnt].move_down())
-#         else:
-#             cnt = add_move_ga(valid_dna_s, cnt, valid_dna_s[cnt].move_left())
-#     for valid_dna in valid_dna_s:
-#         if check_win(valid_dna):
-#             return True
-#     return False
-
-
-# def ga_solution_reprocess(solution, block):
-#     res = [block]
-#     for direction in solution.genes:
-#         if direction == "up":
-#             block = block.move_up()
-#             if add_move_fitness(block):
-#                 res.append(block)
-#             else:
-#                 block = block.move_down()
-#         elif direction == "right":
-#             block = block.move_right()
-#             if add_move_fitness(block):
-#                 res.append(block)
-#             else:
-#                 block = block.move_left()
-#         elif direction == "down":
-#             block = block.move_down()
-#             if add_move_fitness(block):
-#                 res.append(block)
-#             else:
-#                 block = block.move_up()
-#         else:
-#             block = block.move_left()
-#             if add_move_fitness(block):
-#                 res.append(block)
-#             else:
-#                 block = block.move_right()
-#         if check_win(block):
-#             break
-#     return res
-# def distance_euclidean(pos1, pos2):
-#     return sqrt((pos1[1] - pos2[1]) ** 2 + (pos1[0] - pos2[0]) ** 2)
-
-# def compute_heuristic_costs(block, target_pos):
-#     costs = dict()
-#     num = 0
-#     for y in range(len(block.game_map)):
-#         for x in range(len(block.game_map[0])):
-#             pos = (x, y)
-#             if not is_off_map(pos,block):
-#                 costs[num] = distance_euclidean(pos, target_pos)
-#             else:
-#                 costs[num] = inf
-#             num += 1
-#     return costs
-
-# def min_h_cost(h_costs, node):
-#         if node.block.status == "STAND":
-#             index = node.block.y * global_variables.col + node.block.x
-#             value=h_costs[index]
-#             # print("Position: ", (node.block.x,node.block.y,node.block.status))
-#             # print("Index: ", index)
-#             # print("Hcost: ", value)
-#             return value
-
-#         if node.block.status  == "LIE_VERTICAL":
-#             index1 = node.block.y * global_variables.col + node.block.x
-#             index2 = (node.block.y + 1) * global_variables.col + node.block.x
-#             value=min(h_costs[index1], h_costs[index2])
-#             # print("Position: ", (node.block.x,node.block.y,node.block.status))
-#             # print("Hcost: ", value)
-#             return value
-
-#         if node.block.status  == "LIE_HORIZONTAL":
-#             index1 = node.block.y * global_variables.col + node.block.x
-#             index2 = node.block.y * global_variables.col + (node.block.x + 1)
-#             value=min(h_costs[index1], h_costs[index2])
-#             # print("Position: ", (node.block.x,node.block.y,node.block.status))
-#             # print("Hcost: ", value)
-#             return value
-        
-# def get_cost_visited(pos, cost_visited: dict):
-#     cost = namedtuple("cost", ['x', 'y', 'status'])
-#     index = cost(x=pos[0], y=pos[1], status=pos[2])
-#     print(index, cost_visited[index])
-#     return cost_visited[index]
-
-# def set_cost_visited(pos, value: int, cost_visited):
-#     cost = namedtuple("cost", ['x', 'y', 'status'])
-#     index = cost(x=pos[0], y=pos[1], status=pos[2])
-#     cost_visited[index] = value
-
-# def add_move_astar(expanded_nodes, block, cost_visited, heuristic_costs):
-#     if process_state(block):
-#         g_cost = get_cost_visited((block.prev.x,block.prev.y), cost_visited) + 1
-#         if (block.x,block.y,block.status) not in  or g_cost < get_cost_visited((block.x,block.y), cost_visited):
-#             new_node = TreeNode(block)
-#             h_cost = min_h_cost(heuristic_costs, new_node)
-#             new_node.f_cost = g_cost + h_cost
-#             heappush(expanded_nodes, new_node)
-#             print((block.prev.x,block.prev.y,block.prev.status))
-#             print((block.x,block.y,block.status))
-#             print(new_node.f_cost,g_cost,h_cost)
-#             print("")
-#             global_variables.previous.append(new_node.block)
-#             return True
-#         else:
-#             return None
-#     return False
-
-# def is_off_map(pos,block):
-#     if pos[0] < 0 or pos[1] < 0 or pos[0] >= global_variables.col or pos[1] >= global_variables.row or block.game_map[pos[1]][pos[0]] == '.':
-#         return True
-#     else:
-#         return False
     

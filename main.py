@@ -27,6 +27,7 @@ def main():
 
         if global_variables.is_bfs == 1:
             solution = BFS(block)
+            # print(type(block.game_map))
         else:
             print("Change variable in genetic_algorithm.py to have the best performance")
             print(global_variables.goal_x,global_variables.goal_y)
