@@ -4,11 +4,11 @@ from block import Block
 from algorithm import BFS
 import time
 from astar import Astar
-
+import tracemalloc
 
 def test():
     cnt_success = 0
-    for level in range(18,34):
+    for level in range(29,30):
         path = './levels/lvl' + str(level) + '.txt'
         global_variables.init()
         global_variables.row, global_variables.col, global_variables.start_x, \
@@ -16,6 +16,7 @@ def test():
                 global_variables.goal_x, global_variables.goal_y= read_file(path)
         block = Block(global_variables.start_x, global_variables.start_y, "STAND", None, game_map)
         start_time = time.time()
+        tracemalloc.start()
         print("Testing level", level, " ..........")
         # solution = BFS(block)
         a = Astar()
@@ -25,7 +26,7 @@ def test():
             # with open('test_result.txt', 'a') as f:
             #     print('success\n''Level ', str(level), ":     \
             #     Found solution in    ", round(time.time() - start_time, 9), '("s")', file=f)
-            print("Level ", str(level), ":     Found solution in    ", round(time.time() - start_time, 9), ("s"))
+            print("Level ", str(level), ":     Found solution in    ", round(time.time() - start_time, 9), ("s"), "     Memory Used    ", tracemalloc.get_traced_memory()[1])
         else:
             print("Failed to find solution :( ")
         print("===========================================")
